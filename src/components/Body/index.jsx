@@ -1,49 +1,32 @@
 import React, { Component } from "react";
 import "./body.css";
+import bill from "./images/bill.jpg";
+import obama from "./images/obama.jpg";
+import reagan from "./images/reagan.jpg";
+import trump from "./images/trump.jpg";
 
 class Body extends Component {
-  handleClick = () => {
-    this.setState(console.log("click"));
+  state = {
+    clickedImageId: "",
+    images: [bill, obama, reagan, trump]
   };
+
   render() {
     return (
       <div className="container row body">
-        <div className="card col-2 click-image">
-          <img
-            src="https://picsum.photos/150"
-            key="1"
-            id="1"
-            alt="ima"
-            onClick={this.handleClick}
-          />
-        </div>
-        <div className="card col-2 click-image">
-          <img
-            src="https://picsum.photos/150"
-            key="2"
-            id="2"
-            alt="ima"
-            onClick={this.handleClick}
-          />
-        </div>
-        <div className="card col-2 click-image">
-          <img
-            src="https://picsum.photos/150"
-            key="3"
-            id="3"
-            alt="ima"
-            onClick={this.handleClick}
-          />
-        </div>
-        <div className="card col-2 click-image">
-          <img
-            src="https://picsum.photos/150"
-            key="4"
-            id="4"
-            alt="ima"
-            onClick={this.handleClick}
-          />
-        </div>
+        {this.state.images.map(image => (
+          <div className="card col-2 click-image">
+            <img
+              src={image}
+              key={image.indexOf}
+              alt={image}
+              id={image.indexOf}
+              onClick={this.props.handleClick}
+              width={"100%"}
+              height={"100%"}
+            />
+          </div>
+        ))}
       </div>
     );
   }

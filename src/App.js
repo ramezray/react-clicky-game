@@ -6,13 +6,23 @@ import Body from "./components/Body";
 
 
 class App extends Component {
+  state ={
+    score: 0,
+    topScore: 0,
+    handleClick : () => {
+      this.setState({ score: this.state.score + 1 });
+      this.setState({ topScore: this.state.topScore + 1 });
+    }
+  }
+
   
+
   render() {
     return (
       <div >
-          <Navbar />
+          <Navbar score = {this.state.score} topScore = {this.state.topScore}/>
           <Header />
-          <Body />      
+          <Body   score = {this.state.score} handleClick = {this.state.handleClick} />      
           <Footer />
       </div>
     );
