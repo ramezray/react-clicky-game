@@ -9,10 +9,12 @@ class App extends Component {
   state ={
     score: 0,
     topScore: 0,
-    handleClick : () => {
+    increamentScore : () => {
       this.setState({ score: this.state.score + 1 });
       this.setState({ topScore: this.state.topScore + 1 });
-    }
+    },
+    restScore: ()=>{
+      this.setState({score : 0})   }
   }
 
   
@@ -22,7 +24,7 @@ class App extends Component {
       <div >
           <Navbar score = {this.state.score} topScore = {this.state.topScore}/>
           <Header />
-          <Body   score = {this.state.score} handleClick = {this.state.handleClick} />      
+          <Body   score = {this.state.score} increamentScore = {this.state.increamentScore} restScore = {this.state.restScore}/>      
           <Footer />
       </div>
     );
