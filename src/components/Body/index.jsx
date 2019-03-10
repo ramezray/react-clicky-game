@@ -10,16 +10,28 @@ import james from "./images/james.jpg";
 import kennedy from "./images/kennedy.jpg";
 import bushFather from "./images/bushFather.jpg";
 import bushSon from "./images/bushSon.jpg";
-
 let shuffle = require("shuffle-array");
+
 
 class Body extends Component {
   state = {
-    images: [bill, obama, reagan, trump, wa,richard, james, bushFather,kennedy, bushSon],
+    images: [
+      bill,
+      obama,
+      reagan,
+      trump,
+      wa,
+      richard,
+      james,
+      bushFather,
+      kennedy,
+      bushSon
+    ],
     pickedImageArray: []
   };
   render() {
     return (
+      
       <div className="container row body">
         {this.state.images.map((image, index) => (
           <div className="card col-2 click-image" key={index} id={image}>
@@ -28,10 +40,12 @@ class Body extends Component {
               alt={"should be a foto"}
               onClick={() => {
                 this.setState(shuffle(this.state.images));
+
                 if (this.state.pickedImageArray.includes(image)) {
                   this.setState(this.props.restScore);
-                  this.setState({pickedImageArray : []})
+                  this.setState({ pickedImageArray: [] });
                 } else this.setState(this.props.increamentScore);
+                // this.setState(this.props.msg.correctPick);
                 this.setState(() => {
                   this.state.pickedImageArray.push(image);
                 });

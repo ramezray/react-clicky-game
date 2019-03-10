@@ -5,7 +5,7 @@ import "./footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <span>Clicky Game With REACT!!</span>
+      <span>Clicky Game With REACT By Ray Wasif</span>
     </footer>
   );
 }

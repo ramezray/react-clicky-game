@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavMessage from "../NavMsg";
 
 
 class Navbar extends Component {
@@ -9,9 +10,7 @@ class Navbar extends Component {
         <a className="navbar-brand" href="#!">
           Clicky Game
         </a>
-        <a className="navbar-brand" href="#!">
-          Click an Image to Begin!
-        </a>
+        <NavMessage score={this.props.score} topScore={this.props.topScore} />
         <a className="navbar-brand" href="#!">
         Score: {this.props.score} | Top Score: {this.props.topScore}
         </a>

@@ -14,7 +14,12 @@ class App extends Component {
       this.setState({ topScore: this.state.topScore + 1 });
     },
     restScore: ()=>{
-      this.setState({score : 0})   }
+      this.setState({score : 0})},
+      msg: [
+        { gameStart: "Click an Image to Begin!" },
+        { correctPick: "Correct Pick!" },
+        { lostGame: "Sorry You Lost!" }
+      ]
   }
 
   
@@ -22,9 +27,9 @@ class App extends Component {
   render() {
     return (
       <div >
-          <Navbar score = {this.state.score} topScore = {this.state.topScore}/>
+          <Navbar score = {this.state.score} topScore = {this.state.topScore} />
           <Header />
-          <Body   score = {this.state.score} increamentScore = {this.state.increamentScore} restScore = {this.state.restScore}/>      
+          <Body   score = {this.state.score} increamentScore = {this.state.increamentScore} restScore = {this.state.restScore} />      
           <Footer />
       </div>
     );
