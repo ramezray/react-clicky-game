@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavMessage from "../NavMsg";
+import NavMsg from "../NavMsg";
 
 
 class Navbar extends Component {
@@ -10,9 +11,10 @@ class Navbar extends Component {
         <li className="navbar-brand">
           Clicky Game
         </li>
-        <NavMessage score={this.props.score} topScore={this.props.topScore} />
-        <li className="navbar-brand" href="#!">
-        Score: {this.props.score} | Top Score: {this.props.topScore}
+        <NavMsg score={this.props.score} topScore={this.props.topScore} />
+        <li className="navbar-brand">
+        Score: {this.props.score} | Top Score: {this.props.highestScore} 
+
         </li>
       </nav>
     );

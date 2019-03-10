@@ -33,7 +33,7 @@ class Body extends Component {
     return (
       <div className="container row body">
         {this.state.images.map((image, index) => (
-          <div className="card click-image" key={index} id={image}>
+          <div className="card click-image " key={index} id={image}>
             <img
               src={image}
               alt={"should be a foto"}

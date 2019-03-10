@@ -3,7 +3,7 @@ import "./style.css";
 
 // NavMessage renders an li tag containing an message for the user
 
-class NavMessage extends Component {
+class NavMsg extends Component {
   state = {
     message: "",
     animating: false
@@ -48,4 +48,4 @@ class NavMessage extends Component {
   }
 }
 
-export default NavMessage;
+export default NavMsg;
