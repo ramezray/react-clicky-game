@@ -6,14 +6,14 @@ class Navbar extends Component {
   
   render() {
     return (
-      <nav className="navbar sticky-top navbar-dark bg-primary">
-        <a className="navbar-brand" href="#!">
+      <nav className="navbar sticky-top navbar-dark bg-primary col-sm-12">
+        <li className="navbar-brand">
           Clicky Game
-        </a>
+        </li>
         <NavMessage score={this.props.score} topScore={this.props.topScore} />
-        <a className="navbar-brand" href="#!">
+        <li className="navbar-brand" href="#!">
         Score: {this.props.score} | Top Score: {this.props.topScore}
-        </a>
+        </li>
       </nav>
     );
   }
