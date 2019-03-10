@@ -11,7 +11,7 @@ class App extends Component {
     topScore: 0,
     increamentScore : () => {
       this.setState({ score: this.state.score + 1 });
-      this.setState({ topScore: (this.state.topScore < this.state.score ? this.state.topScore +1 : this.state.topScore)})
+      this.setState({ topScore: (this.state.topScore <= this.state.score ? this.state.topScore +1 : this.state.topScore)})
     },
     restScore: ()=>{
       this.setState({score : 0})},
