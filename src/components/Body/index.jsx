@@ -10,9 +10,8 @@ import banana from "./images/banana.jpg";
 import pear from "./images/pear.jpg";
 import strawbarry from "./images/strawbarry.jpg";
 import apple from "./images/apple.jpg";
-import pineapple from "./images/pineapple.jpg"
+import pineapple from "./images/pineapple.jpg";
 let shuffle = require("shuffle-array");
-
 
 class Body extends Component {
   state = {
