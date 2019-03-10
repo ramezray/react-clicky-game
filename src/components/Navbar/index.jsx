@@ -13,7 +13,7 @@ class Navbar extends Component {
         </li>
         <NavMsg score={this.props.score} topScore={this.props.topScore} />
         <li className="navbar-brand">
-        Score: {this.props.score} | Top Score: {this.props.highestScore} 
+        Score: {this.props.score} | Top Score: {this.props.topScore} 
 
         </li>
       </nav>
