@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import NavMessage from "../NavMsg";
 import NavMsg from "../NavMsg";
 
 

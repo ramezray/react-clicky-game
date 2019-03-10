@@ -1,31 +1,33 @@
 import React, { Component } from "react";
 import "./body.css";
-import bill from "./images/bill.jpg";
-import obama from "./images/obama.jpg";
-import reagan from "./images/reagan.jpg";
-import trump from "./images/trump.jpg";
-import wa from "./images/wa.jpg";
-import richard from "./images/richard.jpg";
-import james from "./images/james.jpg";
-import kennedy from "./images/kennedy.jpg";
-import bushFather from "./images/bushFather.jpg";
-import bushSon from "./images/bushSon.jpg";
+import greenApple from "./images/greenApple.jpg";
+import pomegranate from "./images/pomegranate.jpg";
+import grape from "./images/grape.jpg";
+import watermelon from "./images/watermelon.jpg";
+import kaiwi from "./images/kaiwi.jpg";
+import orange from "./images/orange.jpg";
+import banana from "./images/banana.jpg";
+import pear from "./images/pear.jpg";
+import strawbarry from "./images/strawbarry.jpg";
+import apple from "./images/apple.jpg";
+import pineapple from "./images/pineapple.jpg"
 let shuffle = require("shuffle-array");
 
 
 class Body extends Component {
   state = {
     images: [
-      bill,
-      obama,
-      reagan,
-      trump,
-      wa,
-      richard,
-      james,
-      bushFather,
-      kennedy,
-      bushSon
+      greenApple,
+      pomegranate,
+      grape,
+      watermelon,
+      kaiwi,
+      orange,
+      banana,
+      strawbarry,
+      pear,
+      apple,
+      pineapple
     ],
     pickedImageArray: []
   };
@@ -44,7 +46,6 @@ class Body extends Component {
                   this.setState(this.props.restScore);
                   this.setState({ pickedImageArray: [] });
                 } else this.setState(this.props.increamentScore);
-                // this.setState(this.props.msg.correctPick);
                 this.setState(() => {
                   this.state.pickedImageArray.push(image);
                 });
